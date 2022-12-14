@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { getProducts } from '../Redux/App/appAction'
 import axios from 'axios'
-
+import { Button } from '@chakra-ui/react'
 
 
 const Products = () => {
@@ -15,7 +15,7 @@ const Products = () => {
   return (
     <div>
         <div>NAVBAR</div>
-
+        <Button>ChakraProvider is added</Button>
         <div>
                  <div>  <h2>LIPSTICKS</h2></div>
                 
