@@ -1,39 +1,16 @@
 import * as types from "./appActionType"
 import axios from "axios"
 
-const getProductRequest=()=>{
-    return{
-        type:types.GET_PRODUCTS_REQUEST,
-    }
+
+// get function -
+export const getData = ()=> (dispatch)=>
+{
+    dispatch({type: types.GET_REQUEST})
+    return axios
+        .get("https://mywardrob-database-versel-phi.vercel.app/data")
+        .then(res=>{
+            dispatch({type: types.GET_SUCCESS, payload: res.data})
+            // console.log(res.data)
+        })
+        .catch(err=>dispatch({type: types.GET_ERROR}))
 }
-
-const getProductSuccess=(payload)=>{
-    return{
-        type:types.GET_PRODUCTS_SUCCESS,
-        payload
-    }
-}
-
-const getProductError=()=>{
-    return{
-        type:types.GET_PRODUCTS_ERROR,
-    }
-}
-
-const getProducts=(params)=>async (dispatch)=>{
-dispatch(getProductRequest())
-    try {
-        const r = await axios.get(" https://mywardrob-database-versel-phi.vercel.app/Product_array",params)
-        console.log(r.data)
-        dispatch(getProductSuccess(r.data))
-    } catch (e) {
-        dispatch(getProductError())
-    }
-}
-
-getProducts()
-export {getProducts}
-
-//pranay work done
-
-
