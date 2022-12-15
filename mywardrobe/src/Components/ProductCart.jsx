@@ -35,4 +35,4 @@ export default ProductCart;
 
 
 
-  const img=styled.image`:hover{transform:scale(2)}`
+  // const img=styled.image`:hover{transform:scale(2)}`
