@@ -10,7 +10,7 @@ export const getProductData = ()=> (dispatch)=>
         .get("https://mywardrob-database-versel-phi.vercel.app/Product_array")
         .then(res=>{
             dispatch({type: types.GET_PRODUCT_SUCCESS, payload: res.data})
-            // console.log(res.data)
+           // console.log(res.data)
         })
         .catch(err=>dispatch({type: types.GET_PRODUCT_ERROR}))
 }
