@@ -13,17 +13,19 @@ const Login = () => {
   });
   const handleGoogleSignIn = () => {};
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+
+  };
 
   const handleChange = () => {};
   return (
     <div>
-      <div id="logreg-form">
-        <form className="form-sihn-in" onSubmit={handleSubmit}>
+      <div id="logreg-forms">
+        <form className="form-sign-in" onSubmit={handleSubmit}>
           
           <h1
             className="h3 mb-3 font-weight-normal"
-            style={{ testAlign: "center" }}
+            style={{ testAlign: "center", marginLeft:"160px" }}
           >
             Sign In
           </h1>         
@@ -48,7 +50,8 @@ const Login = () => {
             value={state.password}
             required
           />
-          <button className="btn btn-secondary btn-block" type="submit"> Sign In</button>
+          <button className="btn btn-secondary btn-block" 
+          type="submit"> Sign In</button>
 
           <p style={{ textAlign: "center" }}>
             OR
@@ -60,22 +63,22 @@ const Login = () => {
               type="button"
               onClick={handleGoogleSignIn}
             >
-              <span>
-                Sign In with google
-                <FcGoogle />
+              <span style={{display:'flex'}}>
+
+              <FcGoogle style={{fontSize:'20px'}}/> Sign In with google
               </span>
             </button>
             <button className="btn facebook-btn social-btn">
-              <span>
-                Sign In with facebook
-                <FaFacebookSquare />
+              <span style={{display:'flex'}}>
+                
+                <FaFacebookSquare style={{fontSize:'20px'}} /> Sign In with facebook
               </span>
             </button>
           </div>
           <hr />
           <p>Don't Have An Account</p>
           <Link to='/register'>
-          <button className="btn btn-primary btn-block" type="button" id='btn-signup'> Sign Up New Account</button>
+            <button className="btn btn-primary btn-block" type="button" id='btn-signup'> Sign Up New Account</button>
           </Link>
 
 

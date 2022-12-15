@@ -10,6 +10,6 @@ const rootReducer=combineReducers({appReducer,
     user: userReducer})
 
 const store=legacy_createStore(rootReducer,
-    composeEnhancer(applyMiddleware(thunk)) )
+    composeEnhancer(applyMiddleware(thunk)))
 
 export  {store};
