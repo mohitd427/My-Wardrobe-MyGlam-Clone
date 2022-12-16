@@ -16,11 +16,13 @@ export const getProductData = ()=> (dispatch)=>
 }
 
 // add bag function -
-export const addProductData = ()=> (dispatch)=>
+export const addProductData = (payload)=> (dispatch)=>
 {
     dispatch({type: types.ADD_PRODUCT_REQUEST})
     return axios
-        .post(`https://mywardrob-database-versel-phi.vercel.app/Bag`)
+        .post(`https://mywardrob-database-versel-phi.vercel.app/Bag`,JSON.stringify(payload),{
+            headers: { 'Content-Type': 'application/json' },
+          })
         .then(res=>{
             dispatch({type: types.ADD_PRODUCT_SUCCESS, payload: res.data})
             // console.log(res.data)
