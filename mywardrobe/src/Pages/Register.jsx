@@ -1,58 +1,74 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {  Link, useLocation } from "react-router-dom";
-import { BsArrowLeftCircleFill } from "react-icons/bs";
-import './Register.css';
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { BsArrowDownCircleFill, BsArrowLeftCircleFill } from "react-icons/bs";
+import "./Register.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { registerInitiate } from "../Redux/Auth/authAction";
+import { useUserAuth } from "../Context/UserAuthContext";
+import { Alert, AlertDescription, AlertIcon, AlertTitle, space, Spacer } from "@chakra-ui/react";
 
 const Register = () => {
-  const [state, setState] = useState({
-    displayName:'',
+  const [text, setText] = useState({
+    displayName: "",
     email: "",
     password: "",
-    confirmPassword:""
+    confirmPassword: "",
   });
-const {currentUser} = useSelector((state) => state.user)
+  const [err , setErr] = useState("");
+  
+  const { currentUser } = useSelector((state) => state.user);
+  console.log(currentUser)
   const dispatch = useDispatch();
-  const location = useLocation();
+  const navigate = useNavigate();
+  //context Api
+  const { signUp } = useUserAuth();
 
-  useEffect(()=>{
-    if(currentUser){
-
+  useEffect(() => {
+    if (currentUser) {
+      
     }
-  },[currentUser])
+  }, [currentUser]);
 
-  const {email,password,displayName,confirmPassword} = state;
+  const { email, password, displayName, confirmPassword } = text;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if(password !== confirmPassword){
-      return;
+    setErr('')
+    try {
+      await signUp(email,password,displayName)
+      navigate("/");
+    } catch (error) {
+      setErr(error.message)
+
     }
-    dispatch(registerInitiate(email, password, displayName))
-    setState({email:'', diaplayName:'', password:"", confirmPassword:""})
+    
+    setText({ email: "", displayName: "", password: "", confirmPassword: "" });
   };
 
   const handleChange = (e) => {
-    e.preventDefault();
-    let {name,value} = e.target;
-    setState({...state, [name]:value})
+    // e.preventDefault();
+    let input = {[e.target.name] : e.target.value}
+    console.log(e.target.value)
+    setText({ ...text, ...input });
   };
-
 
   return (
     <div>
       <div id="register-form">
         <form className="form-signup" onSubmit={handleSubmit}>
-          
           <h1
             className="h3 mb-3 font-weight-normal"
-            style={{ testAlign: "center", marginLeft:"160px" }}
+            style={{ testAlign: "center", marginLeft: "160px" }}
           >
             Sign Up
-          </h1>         
+          </h1>
+          {err && <Alert status='error'>
+  <AlertIcon />
+  <AlertTitle>Error Occured</AlertTitle>
+  <AlertDescription>{err}</AlertDescription>
+</Alert>}
           <input
             type="text"
             id="displayName"
@@ -74,7 +90,7 @@ const {currentUser} = useSelector((state) => state.user)
             value={email}
             required
           />
-            <input
+          <input
             type="password"
             id="inputPassword"
             className="form-control"
@@ -94,17 +110,16 @@ const {currentUser} = useSelector((state) => state.user)
             value={confirmPassword}
             required
           />
-          
-          <button className="btn btn-secondary btn-block" 
-          type="submit"> Sign Up</button>
 
-          <Link to='/login' style={{display:'flex'}}>
-           <BsArrowLeftCircleFill/> Back To Login
+          <button className="btn btn-secondary btn-block" type="submit">
+            {" "}
+            Sign Up
+          </button>
+          <p style={{ display: "flex" }}>Have An Account :  <BsArrowDownCircleFill /></p>
+
+          <Link to="/login" style={{ display: "flex" }}>
+          <BsArrowLeftCircleFill /> Back To Login
           </Link>
-
-         
-
-
         </form>
       </div>
     </div>
