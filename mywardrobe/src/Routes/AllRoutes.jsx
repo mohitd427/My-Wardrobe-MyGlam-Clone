@@ -33,28 +33,5 @@ export function AllRoutes() {
   );
 }
 
-export function AllRoutes()
-{
-    return(
-     <UserAuthContextProvider>
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/products" element={<Products/>}/>
-            <Route path="/products/:id" element={<SingleProductPage/>}/>
-            <Route path="/bag" element={<Bag/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
-              <Route
-          path="/admin"
-          element={
-            <ProtectedRoutes>
-              <Admin />
-            </ProtectedRoutes>
-          }
-        />
-     
-        </Routes>
-        </UserAuthContextProvider>
-    );
-}
+
 
