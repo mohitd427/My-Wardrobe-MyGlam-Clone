@@ -18,18 +18,18 @@ const Register = () => {
   });
   const [err , setErr] = useState("");
   
-  const { currentUser } = useSelector((state) => state.user);
-  console.log(currentUser)
+  // const { currentUser } = useSelector((state) => state.user);
+  // console.log(currentUser)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   //context Api
   const { signUp } = useUserAuth();
 
-  useEffect(() => {
-    if (currentUser) {
+  // useEffect(() => {
+  //   if (currentUser) {
       
-    }
-  }, [currentUser]);
+  //   }
+  // }, [currentUser]);
 
   const { email, password, displayName, confirmPassword } = text;
 
