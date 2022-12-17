@@ -22,21 +22,19 @@ export function Products()
   
 
     return (
-         <div style={{margin:"10%"}} >
+         <div style={{margin:"10%",marginTop:"20px"}} >
+        
             <Heading mb={4} p={2} sx={{background:'pink',textAlign:'center',justifyContent:'center'}}  >
            LIPSTICKS
             </Heading>
 
             <SimpleGrid   columns={{base:1,sm:2, md:3}} spacingX='40px' spacingY='20px'>
-       { isLoading ? <Skeleton height={"150vh"} width={"80vw"}/>:  payload &&
-                   payload.map(singlePro=>{
-                        return (<Box w='100%' key={singlePro.id}  borderColor={"black"}>
+                 { isLoading ? <Skeleton height={"150vh"} width={"80vw"}/>:  payload &&
+                         payload.map(singlePro=>{
+                         return (<Box w='100%' key={singlePro.id}  borderColor={"black"}>
                          <Link to={`/products/${singlePro.id}`}> <ProductCart  data={singlePro} /> </Link>  
                          </Box>)
-                    }) }
-          
-           
-               
+                         }) }
             </SimpleGrid>
            
     </div>

@@ -74,7 +74,7 @@ const Navbar = () => {
                         />
                     </div>
                     <div className="navbar-icon">
-                        <Link to='/cart'>
+                        <Link to='/bag'>
                             <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
                         </Link>
                         <div className="lineDiv"></div>
