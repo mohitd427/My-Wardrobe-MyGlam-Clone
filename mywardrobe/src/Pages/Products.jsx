@@ -9,10 +9,11 @@ import ProductCart from "../Components/ProductCart";
 export function Products()
 {
     const productData = useSelector(store=>store.productReducer)
+    
     const {payload, isLoading, isError} = productData
     const dispatch = useDispatch();
 
-    console.log(payload)
+
 
     useEffect(()=>{
         dispatch(getProductData())
@@ -24,12 +25,12 @@ export function Products()
             <h1 style={{margin:'center',width:'auto' ,backgroundColor:'pink',alignItems:'center',justifyContent:'center'}}><b>Lipsticks</b></h1>
             </div>
 
-            <SimpleGrid  columns={{base:1,sm:2, md:3}} spacingX='40px' spacingY='20px'>
+            <SimpleGrid   columns={{base:1,sm:2, md:3}} spacingX='40px' spacingY='20px'>
                 { 
                     payload &&
                    payload.map(singlePro=>{
                         return (<Box w='100%'  borderColor={"black"}>
-                         <Link to={`/products/${singlePro.id}`}> <ProductCart key={singlePro.id} data={singlePro} /> </Link>  
+                         <Link to={`/products/${singlePro.id}`}> <ProductCart  key={singlePro.id} data={singlePro} /> </Link>  
                          </Box>)
                     })
                 }

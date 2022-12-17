@@ -10,6 +10,6 @@ const composeEnhancer=window.REDUX_DEVTOOLS_EXTENSION_COMPOSE||compose;
 const rootReducer=combineReducers({productReducer, bagReducer, addressReducer})
 
 const store=legacy_createStore(rootReducer,
-    composeEnhancer(applyMiddleware(thunk)) )
+    composeEnhancer(applyMiddleware(thunk)))
 
 export  {store};
