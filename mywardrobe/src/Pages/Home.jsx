@@ -56,4 +56,3 @@ export function Home() {
       </>
     </Box>
   );
-}
