@@ -14,6 +14,7 @@ import { AuthContext } from "../Context/AuthContextProvider"
 import { useContext } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "./images/logo.jpeg"
 
 /* #262726 #fafafa */
 const Navbar = () => {
@@ -57,14 +58,20 @@ const Navbar = () => {
             </div>
             <div className="navbar">
                 <div className="navbar-top">
+                    <div>
                     <Link to='/'>
                         <Image
-                            src="https://i.ibb.co/Jtvk4Lf/White-Feather.png"
+                            src={logo}
                             alt="White-Feather-Logo"
                             boxSize="90px"
                             objectFit="cover"
+                            rounded="100%"
+                            height="60px"
+                            width="60px"
+                            justifyContent="flex-start"
                         />
                     </Link>
+                    </div>
                     <div className="inputDiv">
                         <BiSearchAlt2 color="#a3a8b1" size="1.6rem" />
                         <input
@@ -74,7 +81,7 @@ const Navbar = () => {
                         />
                     </div>
                     <div className="navbar-icon">
-                        <Link to='/cart'>
+                        <Link to='/bag'>
                             <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
                         </Link>
                         <div className="lineDiv"></div>
@@ -667,7 +674,7 @@ const Navbar = () => {
                             </li>
                         </div>
                         {/* ============== 7th Nav Item ==============  */}
-                        <div>
+                        {/* <div>
 
 
                             <li className="nav-item has-dropdown">
@@ -682,7 +689,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </li>
-                            {/* ============== 8th Nav Item ==============  */}
+                            /* ============== 8th Nav Item ==============  
                             <li className="nav-item has-dropdown">
                                 <li className="nav-item">
                                     <button>
@@ -704,7 +711,8 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </li>
-                        </div>
+                        </div> 
+                    */}
                         {/* ============== 8th Nav Item ==============  */}
                         <div>
                             <li className="nav-item">
