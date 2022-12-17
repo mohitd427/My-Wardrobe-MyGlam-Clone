@@ -17,6 +17,7 @@ export function AllRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<SingleProductPage />} />
         <Route path="/bag" element={<Bag />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
