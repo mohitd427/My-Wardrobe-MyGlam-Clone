@@ -5,6 +5,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import "./Login.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import GoogleButton from "react-google-button";
 import {
   Alert,
   AlertDescription,
@@ -17,12 +18,19 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
-  
 
   const navigate = useNavigate();
-  const { logIn } = useUserAuth();
+  const { logIn, googleSignIn } = useUserAuth();
 
-  const handleGoogleSignIn = () => {};
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      navigate("/");
+    } catch (err) {
+      setErr(err.message);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,21 +87,8 @@ const Login = () => {
           <p style={{ textAlign: "center" }}>OR</p>
 
           <div className="social-login">
-            <button
-              className="btn google-btn social-btn"
-              type="button"
-              onClick={handleGoogleSignIn}
-            >
-              <span style={{ display: "flex" }}>
-                <FcGoogle style={{ fontSize: "20px" }} /> Sign In with google
-              </span>
-            </button>
-            <button className="btn facebook-btn social-btn">
-              <span style={{ display: "flex" }}>
-                <FaFacebookSquare style={{ fontSize: "20px" }} /> Sign In with
-                facebook
-              </span>
-            </button>
+            <GoogleButton size='2px' onClick={handleGoogleSignIn} />
+            
           </div>
           <hr />
           <p>Don't Have An Account</p>

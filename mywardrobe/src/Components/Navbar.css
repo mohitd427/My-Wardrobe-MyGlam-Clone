@@ -36,11 +36,13 @@
     background-color: #262726;
     z-index: 5;
   }
-  .navbar-top {
+  .navbar-top{
     display: flex;
     align-items: center;
     padding: 0rem 2rem;
+    height: 66px;
   }
+  
   .inputDiv {
     display: flex;
     align-items: center;
@@ -55,6 +57,7 @@
     min-width: 32rem;
     margin-left: 1rem;
     outline: none;
+    
   }
   .navbar-icon {
     display: flex;
@@ -66,6 +69,7 @@
     width: 1px;
     height: 2rem;
     background: white;
+    
   }
   .accountName-icon {
     color: white;
@@ -113,12 +117,17 @@
     display: flex;
   }
   .navbar-bottom {
-    
+    margin-bottom: -10px;
+  
     background-color: white;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+<<<<<<< HEAD
     margin-bottom: -8px; 
     margin-top: 10px;
+=======
+  
+>>>>>>> main
   }
   .inNav{
     display: flex;
