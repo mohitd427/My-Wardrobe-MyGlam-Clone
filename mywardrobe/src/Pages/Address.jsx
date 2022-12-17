@@ -1,6 +1,4 @@
 import { Box, Flex, Input, Text, Button, Alert, AlertIcon, AlertTitle, AlertDescription } from "@chakra-ui/react";
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
