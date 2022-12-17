@@ -18,12 +18,13 @@ export const getBagData = ()=> (dispatch)=>
 // delete bag function -
 export const deleteBagData = (id)=> (dispatch)=>
 {
+    // console.log(id)
     dispatch({type: types.DELETE_BAG_REQUEST})
     return axios
         .delete(`https://mywardrob-database-versel-phi.vercel.app/Bag/${id}`)
-        .then(res=>{
+        .then((res)=>{
             dispatch({type: types.DELETE_BAG_SUCCESS, payload: res.data})
-            // console.log(res.data)
         })
+        
         .catch(err=>dispatch({type: types.DELETE_BAG_ERROR}))
 }
