@@ -23,10 +23,12 @@ export function AllRoutes()
 {
     return(
     <UserAuthContextProvider>
+
     
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/products" element={<Products/>}/>
+              <Route path="/products/:id" element={<SingleProductPage />} />
             <Route path="/bag" element={<Bag/>}/>
             <Route path="/address" element={<Address/>}/>
             <Route path="/checkout" element={<Checkout/>}/>
@@ -34,6 +36,7 @@ export function AllRoutes()
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route
+
           path="/admin"
           element={
             <ProtectedRoutes>

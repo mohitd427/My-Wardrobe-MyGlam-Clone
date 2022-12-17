@@ -1,5 +1,3 @@
-import React from "react";
-import { useUserAuth } from "../Context/UserAuthContext"
 
 export function Home()
 {

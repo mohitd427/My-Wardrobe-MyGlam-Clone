@@ -1,17 +1,16 @@
 import React from 'react'
 import {PlusSquareIcon} from "@chakra-ui/icons"
-import styled from 'styled-components'
-import { Box } from '@chakra-ui/react'
-
+import styles from "./Styles/ProductCart.css"
 
 const ProductCart = ({data}) => {
   return (
-     <Box height={{base:"480px",'xs':"500px" ,sm:"520px"}}  sx={{border:"1px",border:'2px solid grey' , cursor:'pointer',margin:'auto', justifyContent:'space-around'}}>
-        {/* <h1>ProductCart</h1> */}
-        <div style={{margin:"5%", borderColor:"red" }} >
+ 
+        <div className="main-box" >
+            {/* product description on products page- */}
+            <div className="div-img" >
+               <img src={data.image}  />
+             </div>
            
-             <img src={data.image} className="image" />
-        
             <h3><b>{data.productName}</b></h3>
             
             <p>{data.shortDes}</p>
@@ -27,12 +26,10 @@ const ProductCart = ({data}) => {
         </div>
         
 
-    </Box>
+  
   )
 }
 
 export default ProductCart;
 
 
-
-  // const img=styled.image`:hover{transform:scale(2)}`
