@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { Box, Image, Show } from "@chakra-ui/react";
 import React from "react";
 import Banner from "../Components/Banner";
@@ -56,12 +56,3 @@ export function Home() {
       </>
     </Box>
   );
-=======
-
-export function Home()
-{
-    const {user} = useUserAuth();
-    // console.log("inHome",user.email)
-    return <h1>Home</h1>
->>>>>>> main
-}
