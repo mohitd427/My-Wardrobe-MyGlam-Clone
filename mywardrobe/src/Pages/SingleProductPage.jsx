@@ -6,7 +6,7 @@ import {StarIcon} from "@chakra-ui/icons"
 import { Box, Button,UnlockIcon } from '@chakra-ui/react';
 import { addProductData } from '../Redux/App/Products/action';
 import YoutubeVideo from '../Components/YoutubeVideo';
-
+import Styles from "./Styles/SingleProductPage.css"
 
 
 const SingleProductPage = () => {
@@ -35,11 +35,11 @@ const SingleProductPage = () => {
      },[id])
 
   return (
-    <div style={{margin:"10%", border:"1px solid red",position:"relative"}}>
-        <h1>Single Product Page</h1>
-        {/* <ProductCart data={currrentPro}/> */}
+    <div style={{margin:"10%", border:"1px solid red"}}>
+       
+        
         <div style={{display:"flex", border:"1px solid black"}}>
-          <div style={{width:"150%", border:"1px solid blue"}}>
+          <div className="div-img" >
             <img src={currrentPro.image}/>
           </div>
          
@@ -107,6 +107,12 @@ const SingleProductPage = () => {
             </div>
           </div>
         </div>
+       
+       
+       
+       
+       
+       
         <br></br>
         <h1>WATCH & LEARN</h1>
         <div style={{display:"flex",margin:"5%"}}>
