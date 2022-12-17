@@ -44,42 +44,42 @@ export function Checkout()
         setPromoCode(()=>!promoCode)
         localStorage.setItem("promo", promoCode)
     }
-    console.log(promoCode)
+    // console.log(promoCode)
 
     // console.log(payload.length)
 
 
     return (
-        <Box fontSize={{base:14, md:15, lg:16}}>
+        <Box fontSize={{base:12, md:14, lg:16}}>
             <Box align={"center"} fontWeight={400} m={"2%"}>
-                <Text fontWeight={700} fontSize={28} mb={10} >Checkout</Text>
+                <Text fontWeight={700} fontSize={{base:20, md:22, lg:24}} mb={5} >Checkout</Text>
                 <Flex justify={"space-between"} >
-                    <Box width={{base:"50%", md:"55%", lg:"55%"}}>
+                    <Box width={{base:"50%", md:"55%", lg:"55%"}} >
                         <Box align={"left"} >
                             <Text fontWeight={700} pb={2} mb={5} borderBottom={"1px solid #eeeeee"} >SHIPPING ADDRESS</Text>
-                            <Text fontWeight={700} mb={1} >{name}</Text>
-                            <Text mb={1} >{address}, {city}, {pincode}, {state}</Text>
+                            <Text fontWeight={700} mb={1} >{name || "please select your address"}</Text>
+                            <Text mb={1} >{address} {city} {pincode} {state}</Text>
                             <Text mb={1}>{phone}</Text>
                             <Text mb={1}>rishabhvishwakarma398@gmail.com</Text>
-                            <Link to="/address"><Button backgroundColor={"black"} color={"white"} _hover={false} mb={2} mt={2} >CHANGE</Button></Link>
+                            <Link to="/address"><Button backgroundColor={"black"} color={"white"} _hover={false} mb={2} mt={2} fontSize={{base:10, md:14, lg:16}} >CHANGE</Button></Link>
                             <Text mb={1} ><Text as={"span"} fontWeight={700} >Expected Delivery Date</Text> <DeliveryDate/></Text>
                         </Box>
                         <Box align={"left"} mt={10} width={{base:"100%", md:"100%", lg:"100%"}} >
                             <Text>YOUR ORDER</Text>
                             {payload?.map(el=><Box key={el.id}>
                                 <Flex justify={"space-between"} pt={2} pb={2} borderBottom={"1px solid #eeeeee"}>
-                                    <Image width={{base:"60px", md:"60px", lg:"70px"}} src={el.image}/>
-                                    <Text fontSize={{base:12, md:14, lg:16}} width={{base:"100px", md:"200px", lg:"250px"}} >{el.productName}</Text>
-                                    <Text fontSize={{base:12, md:14, lg:16}} >1</Text>
-                                    <Text fontSize={{base:12, md:14, lg:16}} >₹{el.actualPrice}</Text>
+                                    <Image width={{base:"40px", md:"60px", lg:"70px"}} src={el.image} h={{base:"50px"}} />
+                                    <Text fontSize={{base:10, md:14, lg:16}} width={{base:"100px", md:"200px", lg:"250px"}} >{el.productName}</Text>
+                                    <Text fontSize={{base:11, md:14, lg:16}} >1</Text>
+                                    <Text fontSize={{base:10, md:14, lg:16}} >₹{el.actualPrice}</Text>
                                 </Flex>
                             </Box>
                         )}
                         </Box>
                     </Box>
 
-                    <Box backgroundColor={"#eeeeee"} p={1} width={{base:"50%", md:"40%", lg:"40%"}} >
-                        <Text mb={1}>Order Summary</Text>
+                    <Box backgroundColor={"#eeeeee"} p={1} width={{base:"50%", md:"40%", lg:"40%"}} fontSize={{base:10, md:14, lg:16}} >
+                        <Text mb={1} fontSize={{base:12, md:14, lg:16}}>Order Summary</Text>
                         <Flex justify={"space-between"} >
                             <Text mb={2}>MRP</Text>
                             <Text mb={2}>₹{MRP}</Text>
@@ -116,7 +116,7 @@ export function Checkout()
                             <Text mb={2}>₹{payload.length > 0 && 10*payload.length}</Text>
                         </Flex>
                         <Box align={"center"}>
-                        <Link to="/payment"><Button _hover={false} backgroundColor={"black"} color={"white"} mt={5} mb={2} pt={2} pb={2}  width={{base:"100%", md:"90%", lg:"90%"}} >PROCEED TO PAYMENT</Button></Link>
+                        <Link to="/payment"><Button _hover={false} backgroundColor={"black"} color={"white"} mt={5} mb={2} pt={2} pb={2}  width={{base:"100%", md:"90%", lg:"90%"}} fontSize={{base:12, md:14, lg:16}} >PROCEED TO PAYMENT</Button></Link>
                         </Box>
                     </Box>
                 </Flex>
