@@ -22,12 +22,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "react-slick": "^0.29.0",
-=======
-    "react-select": "^5.7.0",
-    "react-select-country-list": "^2.2.3",
->>>>>>> main
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.6",

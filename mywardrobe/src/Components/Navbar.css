@@ -117,17 +117,11 @@
     display: flex;
   }
   .navbar-bottom {
-    margin-bottom: -10px;
-  
     background-color: white;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-<<<<<<< HEAD
     margin-bottom: -8px; 
     margin-top: 10px;
-=======
-  
->>>>>>> main
   }
   .inNav{
     display: flex;
