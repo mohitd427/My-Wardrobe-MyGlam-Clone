@@ -1,0 +1,249 @@
+* {
+    font-family: Roboto;
+  }
+  p {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .ad-store,
+  .ad-store-left,
+  .ad-store-right {
+    display: flex;
+    background-color: #fee8e8;
+    align-items: center;
+  }
+  .ad-store {
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+  }
+  .ad-store-left {
+    gap: 0.6rem;
+  }
+  .ad-store-left > a {
+    font-weight: 600;
+    color: #faa8a8;
+    font-size: 0.8rem;
+  }
+  .ad-store-right {
+    gap: 0.5rem;
+  }
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #262726;
+    z-index: 5;
+  }
+  .navbar-top {
+    display: flex;
+    align-items: center;
+    padding: 0rem 2rem;
+  }
+  .inputDiv {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    margin-left: 2rem;
+  }
+  .inputDiv > input {
+    background: none;
+    min-width: 32rem;
+    margin-left: 1rem;
+    outline: none;
+  }
+  .navbar-icon {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+    align-items: center;
+  }
+  .lineDiv {
+    width: 1px;
+    height: 2rem;
+    background: white;
+  }
+  .accountName-icon {
+    color: white;
+  }
+  .accountName {
+    position: relative;
+    display: flex;
+  }
+  .accountName > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+  #accountName-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  .accountName-dropDown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 5px;
+    z-index: 2;
+    margin-top: 2rem;
+    width: 10rem;
+    right: 0;
+  }
+  .accountName-dropDown > a:hover {
+    font-weight: 600;
+  }
+  .accountName-dropDown > button {
+    background-color: rgb(223, 223, 223);
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: flex;
+  }
+  .navbar-bottom {
+    
+    background-color: white;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid red; 
+  }
+  .inNav{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+
+  .navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem 5rem;
+    gap: 2rem;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+    margin-top: 0rem;
+    align-items: center;
+    padding: 1.2rem 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: display 0.15s ease-out;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+  }
+  .dropdown-content {
+    display: flex;
+    gap: 8rem;
+  }
+  .dropdown-content > div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-item a {
+    width: 100%;
+    height: 100%;
+  }
+  .has-dropdown:hover .dropdown {
+    display: block;
+    pointer-events: auto;
+  }
+  .dropdown-content-heading {
+    color: #faa8a8;
+    font-weight: 800;
+  }
+  .dropdown-content-heading:hover {
+    color: #262726;
+  }
+  .dropdown-content > div > button,
+  .nav-item button {
+    position: relative;
+    text-align: left;
+    width: fit-content;
+  }
+  .dropdown-content > div > button > a::before,
+  .nav-item button > a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.15rem;
+    background-color: #faa8a8;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+  }
+  .dropdown-content > div > button > a:hover::before,
+  .nav-item button > a:hover:before {
+    transform: scaleX(1);
+  }
+  .dropdown-content-imageProduct {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .dropdown-content-imageProduct > center {
+    padding: 1rem;
+    border: 1px solid rgb(219, 219, 219);
+  }
+  .adBannerMobileIcon {
+    display: none;
+  }
+  
+  /* ============== MEDIUM DEVICES ============== */
+  @media screen and (max-width: 1024px) {
+    .navbar-top {
+      padding: 0rem 0.8rem;
+    }
+    .inputDiv {
+      width: 50%;
+      padding: 0rem 1.5rem;
+      height: 3rem;
+      margin-left: 1rem;
+    }
+    .inputDiv > input {
+      height: auto;
+      min-width: 20rem;
+    }
+    .navbar-nav {
+      font-size: 0.8rem;
+      list-style-type: none;
+      margin: 0;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* ============== SMALL DEVICES ============== */
+  @media screen and (max-width: 600px) {
+    .navbar {
+      display: none;
+    }
+    .ad-store-right {
+      display: none;
+    }
+    .adBannerMobileIcon {
+      display: block;
+    }
+  }
