@@ -48,6 +48,7 @@
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     margin-left: 2rem;
+    margin-right: 380px;
   }
   .inputDiv > input {
     background: none;
@@ -116,7 +117,8 @@
     background-color: white;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border: 1px solid red; 
+    margin-bottom: -8px; 
+    margin-top: 10px;
   }
   .inNav{
     display: flex;
@@ -199,8 +201,9 @@
   }
   .dropdown-content-imageProduct {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 10px;
+    height: max-content;
     border-radius: 5px;
     text-align: center;
   }
