@@ -33,5 +33,3 @@ const ProductCart = ({data}) => {
 export default ProductCart;
 
 
-
- 

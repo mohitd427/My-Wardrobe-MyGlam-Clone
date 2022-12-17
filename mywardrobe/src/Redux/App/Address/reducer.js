@@ -1,7 +1,7 @@
 import * as types from "./actionType"
 
 const initialState={
-    payload:[],
+    payload:{},
     isLoading:false,
     isError:false
 }
@@ -9,27 +9,29 @@ const initialState={
 export const reducer=(state=initialState,action)=>{
     const{type,payload}=action;
     switch(type){
-        case types.GET_BAG_REQUEST:
+        // get address-
+        case types.GET_ADDRESS_REQUEST:
             return {...state,isLoading:true}
         
-        case types.GET_BAG_SUCCESS:
+        case types.GET_ADDRESS_SUCCESS:
             return {...state,isLoading:false,payload}
             
-        case types.GET_BAG_ERROR:
+        case types.GET_ADDRESS_ERROR:
             return {...state,isLoading:false,isError:true}
 
-            // delete bag -
-        case types.DELETE_BAG_REQUEST:
+
+        // post address-
+        case types.ADD_ADDRESS_REQUEST:
             return {...state,isLoading:true}
         
-        case types.DELETE_BAG_SUCCESS:
+        case types.ADD_ADDRESS_SUCCESS:
             return {...state,isLoading:false,payload}
             
-        case types.DELETE_BAG_ERROR:
+        case types.ADD_ADDRESS_ERROR:
             return {...state,isLoading:false,isError:true}
 
             
         default:
-            return {...state};    
+            return state;    
     }
 }
