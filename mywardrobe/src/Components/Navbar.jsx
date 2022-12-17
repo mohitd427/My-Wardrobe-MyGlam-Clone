@@ -103,13 +103,13 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-bottom">
 
-                    <ul class="navbar-nav">
+                    <ul className="navbar-nav">
                         <div className="inNav">
                             <div>
 
 
                                 {/* ============== 1st Nav Item ==============  */}
-                                <li class="nav-item">
+                                <li className="nav-item">
                                     <button>
 
                                         <a href="#">HOME</a>
@@ -118,8 +118,8 @@ const Navbar = () => {
                             </div>
                             {/* ============== 2nd Nav Item ==============  */}
                             <div>
-                                <li class="nav-item has-dropdown">
-                                    <li class="nav-item">
+                                <li className="nav-item has-dropdown">
+                                    <li className="nav-item">
                                         <button>
                                             <Link to='/makeup'>MAKEUP</Link>
                                         </button>
@@ -304,8 +304,8 @@ const Navbar = () => {
                         
                         {/* ============== 3rd Nav Item ==============  */}
                         <div>
-                            <li class="nav-item has-dropdown">
-                                <li class="nav-item">
+                            <li className="nav-item has-dropdown">
+                                <li className="nav-item">
                                     <button>
 
                                         <a href="#">HAIR CARE</a>
@@ -416,8 +416,8 @@ const Navbar = () => {
                         </div>
                         {/* ============== 4th Nav Item ==============  */}
                         <div>
-                            <li class="nav-item has-dropdown">
-                                <li class="nav-item">
+                            <li className="nav-item has-dropdown">
+                                <li className="nav-item">
                                     <button>
 
                                         <a href="#">SKIN CARE</a>
@@ -469,8 +469,8 @@ const Navbar = () => {
                         </div>
                         {/* ============== 5th Nav Item ==============  */}
                         <div>
-                            <li class="nav-item has-dropdown">
-                                <li class="nav-item">
+                            <li className="nav-item has-dropdown">
+                                <li className="nav-item">
                                     <button>
 
                                         <a href="#">SANITIZING CARE</a>
@@ -577,8 +577,8 @@ const Navbar = () => {
                         </div>
                         {/* ============== 6th Nav Item ==============  */}
                         <div>
-                            <li class="nav-item has-dropdown">
-                                <li class="nav-item">
+                            <li className="nav-item has-dropdown">
+                                <li className="nav-item">
                                     <button>
 
                                         <a href="#">COLLECTION</a>
@@ -670,8 +670,8 @@ const Navbar = () => {
                         <div>
 
 
-                            <li class="nav-item has-dropdown">
-                                <li class="nav-item">
+                            <li className="nav-item has-dropdown">
+                                <li className="nav-item">
                                     <button>
 
                                         <a href="#">REWARDS</a>
@@ -683,8 +683,8 @@ const Navbar = () => {
                                 </div>
                             </li>
                             {/* ============== 8th Nav Item ==============  */}
-                            <li class="nav-item has-dropdown">
-                                <li class="nav-item">
+                            <li className="nav-item has-dropdown">
+                                <li className="nav-item">
                                     <button>
 
                                         <a href="#">COLLECTION</a>
@@ -707,7 +707,7 @@ const Navbar = () => {
                         </div>
                         {/* ============== 8th Nav Item ==============  */}
                         <div>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <button>
 
                                     <a href="#">OFFER</a>
