@@ -33,7 +33,7 @@ const Navbar = () => {
 
         }
     }
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
     const { isOpen, onOpen, onClose, isLogin, setIsLogin } = useContext(AppContext)
     useEffect(() => {
         if (user != null) {
@@ -107,9 +107,9 @@ const Navbar = () => {
                                         </div>
 
                                         <div className="accountName-dropDown" id="accountdrop">
-                                            <a href="#">My Profile</a>
-                                            <a href="#">My Orders</a>
-                                            <a href="#">My Dashboard</a>
+                                            <Link to='/'>My Profile</Link>
+                                           <Link to='/bag'>My Orders</Link>
+                                            <Text fontSize={'17px'}>My Dashboard</Text>
                                             <button onClick={handleSignout}>Sign Out</button>
                                         </div>
                                     </div>

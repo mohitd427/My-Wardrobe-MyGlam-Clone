@@ -1,4 +1,3 @@
-
 import { Address } from "../Pages/Address";
 
 import { FcDataProtection } from "react-icons/fc";
@@ -15,28 +14,27 @@ import { Products } from "../Pages/Products";
 import Register from "../Pages/Register";
 import SingleProductPage from "../Pages/SingleProductPage";
 
-
-
-
-
-export function AllRoutes()
-{
-    return(
+export function AllRoutes() {
+  return (
     <UserAuthContextProvider>
-
-    
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/products" element={<Products/>}/>
-              <Route path="/products/:id" element={<SingleProductPage />} />
-            <Route path="/bag" element={<Bag/>}/>
-            <Route path="/address" element={<Address/>}/>
-            <Route path="/checkout" element={<Checkout/>}/>
-            <Route path="/payment" element={<Payment/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
-            <Route
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<SingleProductPage />} />
+        <Route
+          path="/bag"
+          element={
+            <ProtectedRoutes>
+              <Bag />
+            </ProtectedRoutes>
+          }
+        />
+        <Route path="/address" element={<Address />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
           path="/admin"
           element={
             <ProtectedRoutes>
@@ -44,9 +42,7 @@ export function AllRoutes()
             </ProtectedRoutes>
           }
         />
-        </Routes>
+      </Routes>
     </UserAuthContextProvider>
-        
-    );
+  );
 }
-
