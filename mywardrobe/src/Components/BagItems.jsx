@@ -1,4 +1,4 @@
-import { Box, CloseButton, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, CloseButton, Flex, Image, Text } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -22,7 +22,11 @@ export function BagItems(el)
                 <Image src={el.image} width={{ base: '80px', md: '100px', lg: '100px' }} h={{base:"70px"}} />
                 <Text width={{ base: '120px', md: '250px', lg: '400px' }} >{el.productName}</Text>
                 <Text>₹ {el.actualPrice}</Text>
-                <ButtonComponent/>
+                <Flex display={{ base: 'none', md: 'block', lg: 'block' }}>
+                    <Button border={"1px solid"}   ml={1} mr={1}>-</Button>
+                    <Button border={"1px solid"}   ml={1} mr={1}>1</Button>
+                    <Button border={"1px solid"}   ml={1} mr={1}>+</Button>
+                </Flex>
                 <Text display={{ base: 'none', md: 'block', lg: 'block' }}>₹ {el.actualPrice}</Text>
                 <CloseButton display={{ base: 'block', md: 'block', lg: 'block' }} color={"#5b5b5b"} onClick={()=>deleteHandler(id)} />
             </Flex>
