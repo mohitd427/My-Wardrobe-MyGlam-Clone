@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Flex, Button, Image, Skeleton } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -14,7 +14,6 @@ export function Checkout()
     const{address, pincode, city, state, name, phone} = addressData
     const {payload, isLoading, isError} = dataBag
     const addressDispatch = useDispatch();
-
     const dispatch = useDispatch();
 
     useEffect(()=>{
@@ -47,6 +46,10 @@ export function Checkout()
     // console.log(promoCode)
 
     // console.log(payload.length)
+    if(isLoading)
+    {
+        return <Skeleton height={"80vh"} />
+    }
 
 
     return (
