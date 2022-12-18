@@ -26,7 +26,7 @@ export function Bag ()
     {payload?.map(el=>Total+=el.actualPrice)}
 
     return (
-        <Box fontSize={{base:12, md:14, lg:16}} letterSpacing={0.9} fontWeight={400} >
+        <Box fontSize={{base:12, md:14, lg:16}} letterSpacing={0.9} fontWeight={400} mt={5} mb={5}>
             <Text align={"center"} fontSize={{base:20, md:22, lg:24}} mb={5} >MY BAG ({isLoading === false ? payload.length : <Spinner size="xs" />})</Text>
             <Box w={{base:"100%", md:"95%", lg:"90%"}} margin={"auto"} align={"center"} backgroundColor={"black"} color={"white"} pt={2} pb={2} mb={5}  >
                 <Text>Congrats! You're eligible for free gift Please select.</Text>
