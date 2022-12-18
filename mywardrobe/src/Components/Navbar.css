@@ -36,11 +36,13 @@
     background-color: #262726;
     z-index: 5;
   }
-  .navbar-top {
+  .navbar-top{
     display: flex;
     align-items: center;
     padding: 0rem 2rem;
+    height: 66px;
   }
+  
   .inputDiv {
     display: flex;
     align-items: center;
@@ -48,12 +50,14 @@
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     margin-left: 2rem;
+    margin-right: 380px;
   }
   .inputDiv > input {
     background: none;
     min-width: 32rem;
     margin-left: 1rem;
     outline: none;
+    
   }
   .navbar-icon {
     display: flex;
@@ -65,6 +69,7 @@
     width: 1px;
     height: 2rem;
     background: white;
+    
   }
   .accountName-icon {
     color: white;
@@ -112,11 +117,11 @@
     display: flex;
   }
   .navbar-bottom {
-    
     background-color: white;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border: 1px solid red; 
+    margin-bottom: -8px; 
+    margin-top: 10px;
   }
   .inNav{
     display: flex;
@@ -199,8 +204,9 @@
   }
   .dropdown-content-imageProduct {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 10px;
+    height: max-content;
     border-radius: 5px;
     text-align: center;
   }

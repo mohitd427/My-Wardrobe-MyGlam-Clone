@@ -15,6 +15,10 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import logo from "../images/logo.jpeg"
+
+
+
 /* #262726 #fafafa */
 const Navbar = () => {
 
@@ -29,7 +33,7 @@ const Navbar = () => {
 
         }
     }
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
     const { isOpen, onOpen, onClose, isLogin, setIsLogin } = useContext(AppContext)
     useEffect(() => {
         if (user != null) {
@@ -57,14 +61,21 @@ const Navbar = () => {
             </div>
             <div className="navbar">
                 <div className="navbar-top">
+                    <div>
                     <Link to='/'>
                         <Image
-                            src="https://i.ibb.co/Jtvk4Lf/White-Feather.png"
+                            src={logo}
                             alt="White-Feather-Logo"
                             boxSize="90px"
                             objectFit="cover"
+                            rounded="50%"
+                            height="60px"
+                            width="60px"
+                            margin="auto"
+                            
                         />
                     </Link>
+                    </div>
                     <div className="inputDiv">
                         <BiSearchAlt2 color="#a3a8b1" size="1.6rem" />
                         <input
@@ -74,31 +85,38 @@ const Navbar = () => {
                         />
                     </div>
                     <div className="navbar-icon">
-                        <Link to='/cart'>
+                        <Link to='/bag'>
                             <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
                         </Link>
                         <div className="lineDiv"></div>
-                        {
-                            checkVal ? (
-                                <div className="accountName">
-                                    <div>
-                                        <button id="accountName-btn" onClick={accountNameDrop}>
-                                            {
-                                                checkVal
-                                            }
-                                            <IoMdArrowDropdown className="accountName-icon" />
-                                        </button>
-                                    </div>
-                                    <div className="accountName-dropDown" id="accountdrop">
-                                        <a href="#">My Profile</a>
-                                        <a href="#">My Orders</a>
-                                        <a href="#">My Dashboard</a>
-                                        <button onClick={handleSignout}>Sign Out</button>
-                                    </div>
-                                </div>
-                            ) : (<BsPerson color="#fafafa" size="1.5rem" onClick={onOpen} style={{ cursor: 'pointer' }} />)
-                        }
+                        <Link to="/login">
+                            {
+                                checkVal ? (
 
+                                    <div className="accountName">
+
+                                        <div>
+
+                                            <button id="accountName-btn" onClick={accountNameDrop}>
+                                                {
+                                                    checkVal
+                                                }
+                                                <IoMdArrowDropdown className="accountName-icon" />
+                                            </button>
+
+                                        </div>
+
+                                        <div className="accountName-dropDown" id="accountdrop">
+                                            <Link to='/'>My Profile</Link>
+                                           <Link to='/bag'>My Orders</Link>
+                                            <Text fontSize={'17px'}>My Dashboard</Text>
+                                            <button onClick={handleSignout}>Sign Out</button>
+                                        </div>
+                                    </div>
+
+                                ) : (<BsPerson color="#fafafa" size="1.5rem" onClick={onOpen} style={{ cursor: 'pointer' }} />)
+                            }
+                        </Link>
                     </div>
                 </div>
                 <div className="navbar-bottom">
@@ -131,9 +149,11 @@ const Navbar = () => {
                                                 <a href="#" className="dropdown-content-heading">
                                                     LIPS
                                                 </a>
+                                                <Link to="/products">
                                                 <button>
                                                     <a href="#">Lipstick</a>
                                                 </button>
+                                                </Link>
                                                 <button>
                                                     <a href="#">Crayon Lipstick</a>
                                                 </button>
@@ -171,7 +191,7 @@ const Navbar = () => {
                                                     <a href="#">Find Your Lipstick</a>
                                                 </button>
                                             </div>
-                                            <div>
+                                            {/* <div>
                                                 <a href="#" className="dropdown-content-heading">
                                                     LIPS
                                                 </a>
@@ -259,6 +279,272 @@ const Navbar = () => {
                                                     <a href="#">Find Your Lipstick</a>
                                                 </button>
                                             </div>
+                                            <div>
+                                                <a href="#" className="dropdown-content-heading">
+                                                    LIPS
+                                                </a>
+                                                <button>
+                                                    <a href="#">Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Crayon Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Liquid Lipstick</a>
+                                                </button>
+                                                <a href="#" className="dropdown-content-heading">
+                                                    LIPS
+                                                </a>
+                                                <button>
+                                                    <a href="#">Hi-Shine Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Matte Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Lip Gloss</a>
+                                                </button>
+                                                <a href="#" className="dropdown-content-heading">
+                                                    LIPS
+                                                </a>
+                                                <button>
+                                                    <a href="#">Lip Liner</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Lip Balm</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Lip Glitter</a>
+                                                </button>
+                    </div>*/}
+                                            <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/800x800/Lststr-1.jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                            height="120px"
+                                                        />
+                                                        <Heading size='xs'>Combo of 2 MyGlamm LIT Satin Matte Lipstick - Lipsticks</Heading>
+                                                        <p>Hi-Wattage 3D Satin Matte Finish Lipstick With Intense Colour Payoff</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>1038</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>990</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/800x800/open-product-with-side-bar_2.jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                            height="120px"
+                                                        />
+                                                        <Heading size='xs'>POPxo Makeup - Mini Lip Kit - Lipsticks</Heading>
+                                                        <p>Mini Lipstick kit with 3 creamy-matte nude lipsticks</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>349</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>219</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/800x800/Flirtini_6.jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                            height="120px"
+                                                        />
+                                                        <Heading size='xs'>LIT Creamy Matte Lipstick - Lipsticks</Heading>
+                                                        <p>Precision Perfect Matte Slimstick</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>595</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>417</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/800x800/Melon-Squeeze-(1).jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                            height="120px"
+                                                        />
+                                                        <Heading size='xs'>K.Play Flavoured Lipstick - Lipsticks</Heading>
+                                                        <p>Melon Flavoured Vitamin E-enriched Creamy Lipstick</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>545</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>382</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/800x800/Hott-(1).jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                            height="120px"
+                                                        />
+                                                        <Heading size='xs'>LIT Liquid Matte Lipstick - Lipsticks</Heading>
+                                                        <p>Moringa Oil Enriched Matte Lipstick</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>633</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>395</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </div>
+
+                            {/* ============== 3rd Nav Item ==============  */}
+                            <div>
+                                <li className="nav-item has-dropdown">
+                                    <li className="nav-item">
+                                        <button>
+
+                                            <a href="#">HAIR CARE</a>
+                                        </button>
+                                    </li>
+                                    <div className="dropdown">
+                                        <div className="dropdown-content">
+                                            <div>
+                                                <a href="#" className="dropdown-content-heading">
+                                                    HAIR CARE
+                                                </a>
+                                                <button>
+                                                    <a href="#">Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Crayon Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Liquid Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Hi-Shine Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Matte Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Lip Gloss</a>
+                                                </button>
+                                            </div>
+                                            <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                                                            alt="White-Feather-Logo"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            {/* ============== 4th Nav Item ==============  */}
+                            <div>
+                                <li className="nav-item has-dropdown">
+                                    <li className="nav-item">
+                                        <button>
+
+                                            <a href="#">SKIN CARE</a>
+                                        </button>
+                                    </li>
+                                    <div className="dropdown">
+                                        <div className="dropdown-content">
                                             <div>
                                                 <a href="#" className="dropdown-content-heading">
                                                     LIPS
@@ -301,373 +587,207 @@ const Navbar = () => {
                                     </div>
                                 </li>
                             </div>
-                        
-                        {/* ============== 3rd Nav Item ==============  */}
-                        <div>
-                            <li className="nav-item has-dropdown">
-                                <li className="nav-item">
-                                    <button>
+                            {/* ============== 5th Nav Item ==============  */}
+                            <div>
+                                <li className="nav-item has-dropdown">
+                                    <li className="nav-item">
+                                        <button>
 
-                                        <a href="#">HAIR CARE</a>
-                                    </button>
-                                </li>
-                                <div className="dropdown">
-                                    <div className="dropdown-content">
-                                        <div>
-                                            <a href="#" className="dropdown-content-heading">
-                                                HAIR CARE
-                                            </a>
-                                            <button>
-                                                <a href="#">Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Crayon Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Liquid Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Hi-Shine Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Matte Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Lip Gloss</a>
-                                            </button>
-                                        </div>
-                                        <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
-                                                        alt="White-Feather-Logo"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
+                                            <a href="#">SANITIZING CARE</a>
+                                        </button>
+                                    </li>
+                                    <div className="dropdown">
+                                        <div className="dropdown-content">
+                                            <div>
+                                                <a href="#" className="dropdown-content-heading">
+                                                    SANITIZING CARE
                                                 </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
-                                                        alt="White-Feather-Logo"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
-                                                        alt="White-Feather-Logo"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
-                                                        alt="White-Feather-Logo"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
+                                                <button>
+                                                    <a href="#">Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Crayon Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Liquid Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Hi-Shine Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Matte Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Lip Gloss</a>
+                                                </button>
+                                            </div>
+                                            <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        </div>
-                        {/* ============== 4th Nav Item ==============  */}
-                        <div>
-                            <li className="nav-item has-dropdown">
-                                <li className="nav-item">
-                                    <button>
-
-                                        <a href="#">SKIN CARE</a>
-                                    </button>
                                 </li>
-                                <div className="dropdown">
-                                    <div className="dropdown-content">
-                                        <div>
-                                            <a href="#" className="dropdown-content-heading">
-                                                LIPS
-                                            </a>
-                                            <button>
-                                                <a href="#">Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Crayon Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Liquid Lipstick</a>
-                                            </button>
-                                            <a href="#" className="dropdown-content-heading">
-                                                LIPS
-                                            </a>
-                                            <button>
-                                                <a href="#">Hi-Shine Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Matte Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Lip Gloss</a>
-                                            </button>
-                                            <a href="#" className="dropdown-content-heading">
-                                                LIPS
-                                            </a>
-                                            <button>
-                                                <a href="#">Lip Liner</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Lip Balm</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Lip Glitter</a>
-                                            </button>
+                            </div>
+                            {/* ============== 6th Nav Item ==============  */}
+                            <div>
+                                <li className="nav-item has-dropdown">
+                                    <li className="nav-item">
+                                        <button>
+
+                                            <a href="#">COLLECTION</a>
+                                        </button>
+                                    </li>
+                                    <div className="dropdown">
+                                        <div className="dropdown-content">
+                                            <div>
+                                                <a href="#" className="dropdown-content-heading">
+                                                    SHOP BY COLLECTION
+                                                </a>
+                                                <button>
+                                                    <a href="#">Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Crayon Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Liquid Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Hi-Shine Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Matte Lipstick</a>
+                                                </button>
+                                                <button>
+                                                    <a href="#">Lip Gloss</a>
+                                                </button>
+                                            </div>
+                                            <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Tile-1-Soiree_1.jpg"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Tile-1-Soiree_1.jpg"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                                <center>
+                                                    <a href="#">
+                                                        <Image
+                                                            src="https://files.myglamm.com/site-images/400x400/Tile-1-Soiree_1.jpg"
+                                                            boxSize="150px"
+                                                            objectFit="cover"
+                                                        />
+                                                        <Heading size='xs'>White feather</Heading>
+                                                        <p>For hair fall control</p>
+                                                        <HStack>
+                                                            <Spacer />
+                                                            <Text as='b'>195</Text>
+                                                            <Text as='s' color='BlackAlpha 400'>299</Text>
+                                                            <Spacer />
+                                                        </HStack>
+                                                    </a>
+                                                </center>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        </div>
-                        {/* ============== 5th Nav Item ==============  */}
-                        <div>
-                            <li className="nav-item has-dropdown">
-                                <li className="nav-item">
-                                    <button>
-
-                                        <a href="#">SANITIZING CARE</a>
-                                    </button>
                                 </li>
-                                <div className="dropdown">
-                                    <div className="dropdown-content">
-                                        <div>
-                                            <a href="#" className="dropdown-content-heading">
-                                                SANITIZING CARE
-                                            </a>
-                                            <button>
-                                                <a href="#">Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Crayon Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Liquid Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Hi-Shine Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Matte Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Lip Gloss</a>
-                                            </button>
-                                        </div>
-                                        <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Game-over-Germs_2.jpg"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        {/* ============== 6th Nav Item ==============  */}
-                        <div>
-                            <li className="nav-item has-dropdown">
-                                <li className="nav-item">
-                                    <button>
-
-                                        <a href="#">COLLECTION</a>
-                                    </button>
-                                </li>
-                                <div className="dropdown">
-                                    <div className="dropdown-content">
-                                        <div>
-                                            <a href="#" className="dropdown-content-heading">
-                                                SHOP BY COLLECTION
-                                            </a>
-                                            <button>
-                                                <a href="#">Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Crayon Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Liquid Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Hi-Shine Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Matte Lipstick</a>
-                                            </button>
-                                            <button>
-                                                <a href="#">Lip Gloss</a>
-                                            </button>
-                                        </div>
-                                        <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Tile-1-Soiree_1.jpg"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Tile-1-Soiree_1.jpg"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                            <center>
-                                                <a href="#">
-                                                    <Image
-                                                        src="https://files.myglamm.com/site-images/400x400/Tile-1-Soiree_1.jpg"
-                                                        boxSize="150px"
-                                                        objectFit="cover"
-                                                    />
-                                                    <Heading size='xs'>White feather</Heading>
-                                                    <p>For hair fall control</p>
-                                                    <HStack>
-                                                        <Spacer />
-                                                        <Text as='b'>195</Text>
-                                                        <Text as='s' color='BlackAlpha 400'>299</Text>
-                                                        <Spacer />
-                                                    </HStack>
-                                                </a>
-                                            </center>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        {/* ============== 7th Nav Item ==============  */}
-                        <div>
+                            </div>
+                            {/* ============== 7th Nav Item ==============  */}
+                            {/* <div>
 
 
                             <li className="nav-item has-dropdown">
@@ -682,7 +802,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </li>
-                            {/* ============== 8th Nav Item ==============  */}
+                            {/* ============== 8th Nav Item ==============  
                             <li className="nav-item has-dropdown">
                                 <li className="nav-item">
                                     <button>
@@ -704,16 +824,16 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </li>
-                        </div>
-                        {/* ============== 8th Nav Item ==============  */}
-                        <div>
-                            <li className="nav-item">
-                                <button>
+                    </div> */}
+                            {/* ============== 8th Nav Item ==============  */}
+                            <div>
+                                <li className="nav-item">
+                                    <button>
 
-                                    <a href="#">OFFER</a>
-                                </button>
-                            </li>
-                        </div>
+                                        <a href="#">OFFER</a>
+                                    </button>
+                                </li>
+                            </div>
                         </div>
                     </ul>
 

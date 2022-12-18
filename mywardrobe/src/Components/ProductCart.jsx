@@ -5,8 +5,8 @@ import styles from "./Styles/ProductCart.css"
 const ProductCart = ({data}) => {
   return (
  
-      
         <div className="main-box" >
+            {/* product description on products page- */}
             <div className="div-img" >
                <img src={data.image}  />
              </div>
