@@ -47,14 +47,15 @@
     display: flex;
     align-items: center;
     background-color: #fafafa;
-    padding: 0.5rem 1.5rem;
+    width: 50vw;
+    height: 7vh;
     border-radius: 5px;
     margin-left: 2rem;
     margin-right: 380px;
   }
   .inputDiv > input {
     background: none;
-    min-width: 32rem;
+    width: 100%;
     margin-left: 1rem;
     outline: none;
     
@@ -125,7 +126,7 @@
   }
   .inNav{
     display: flex;
-    gap: 2rem;
+    gap: 5vw;
     justify-content: space-evenly;
   }
 
@@ -224,14 +225,13 @@
       padding: 0rem 0.8rem;
     }
     .inputDiv {
-      width: 50%;
+      /* width: 40vw; */
       padding: 0rem 1.5rem;
-      height: 3rem;
       margin-left: 1rem;
     }
     .inputDiv > input {
-      height: auto;
-      min-width: 20rem;
+      /* height: auto; */
+      width: 100%;
     }
     .navbar-nav {
       font-size: 0.8rem;

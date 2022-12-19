@@ -13,6 +13,7 @@ import { Payment } from "../Pages/Payment";
 import { Products } from "../Pages/Products";
 import Register from "../Pages/Register";
 import SingleProductPage from "../Pages/SingleProductPage";
+import OrderPlaced from "../Pages/OrderPlaced";
 
 export function AllRoutes() {
   return (
@@ -34,6 +35,7 @@ export function AllRoutes() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/orderplaced" element={<OrderPlaced />} />
         <Route
           path="/admin"
           element={

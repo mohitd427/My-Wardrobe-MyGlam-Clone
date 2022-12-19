@@ -71,7 +71,7 @@ export function Checkout()
                             <Text>YOUR ORDER</Text>
                             {payload?.map(el=><Box key={el.id}>
                                 <Flex justify={"space-between"} pt={2} pb={2} borderBottom={"1px solid #eeeeee"}>
-                                    <Image width={{base:"40px", md:"60px", lg:"70px"}} src={el.image} h={{base:"50px"}} />
+                                    <Image width={{base:"40px", md:"60px", lg:"70px"}} src={el.image} h={{base:"50px"}} m={0} />
                                     <Text fontSize={{base:10, md:14, lg:16}} width={{base:"100px", md:"200px", lg:"250px"}} >{el.productName}</Text>
                                     <Text fontSize={{base:11, md:14, lg:16}} >1</Text>
                                     <Text fontSize={{base:10, md:14, lg:16}} >₹{el.actualPrice}</Text>

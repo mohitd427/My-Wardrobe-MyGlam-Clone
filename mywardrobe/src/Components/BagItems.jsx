@@ -36,7 +36,7 @@ export function BagItems(el)
     return(
         <>
             <Flex key={el.id} width={{ base: '100%', md: '95%', lg: '90%' }} margin={"auto"} justify={"space-around"} borderBottom={"1px solid #999999"} mt={2} mb={2} pb={5} pt={5} >
-                <Image src={el.image} width={{ base: '80px', md: '100px', lg: '100px' }} h={{base:"70px"}} />
+                <Image src={el.image} width={{ base: '100px', md: '120px', lg: '120px' }}  m={0} />
                 <Text width={{ base: '120px', md: '250px', lg: '400px' }} >{el.productName}</Text>
                 <Text>₹ {el.actualPrice*qnt}</Text>
                 <Flex display={{ base: 'none', md: 'block', lg: 'block' }}>

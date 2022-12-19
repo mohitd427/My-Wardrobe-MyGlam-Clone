@@ -1,6 +1,7 @@
 import { Box, Flex, Input, Stack, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
+import { Link } from "react-router-dom";
 import { getBagData } from "../Redux/App/Bag/action";
 
 export function Payment()
@@ -51,7 +52,7 @@ export function Payment()
                     </Flex>
                     <Flex display={{base:"block", md:"flex", lg:"flex"}} justify={"space-between"} mt={10} backgroundColor={"#eeeeee"} p={4} borderRadius={"5px"}>
                         <Input fontSize={{base:12, md:14, lg:16}} backgroundColor={"white"} type="text" placeholder="Enter your UPI ID" width={{base:"100%", md:"70%", lg:"70%"}} focusBorderColor='black.400' />
-                        <Input fontSize={{base:12, md:14, lg:16}} type="submit" value={"REQUEST"} backgroundColor={"black"} color={"white"} width={{base:"100%", md:"29%", lg:"29%"}} mt={{base:5, md:0, lg:0}}  />
+                        <Link to ="/orderplaced"><Input fontSize={{base:12, md:14, lg:16}} type="submit" value={"PAYMENT"} backgroundColor={"black"} color={"white"} width={{base:"100%", md:"100%", lg:"100%"}} mt={{base:5, md:0, lg:0}}   /></Link>
                     </Flex>
                 </Box>
             </Box>

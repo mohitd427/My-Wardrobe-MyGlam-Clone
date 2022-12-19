@@ -77,7 +77,7 @@ const Navbar = () => {
                     </Link>
                     </div>
                     <div className="inputDiv">
-                        <BiSearchAlt2 color="#a3a8b1" size="1.6rem" />
+                        <BiSearchAlt2 color="#a3a8b1" />
                         <input
                             type="text"
                             name="search"
