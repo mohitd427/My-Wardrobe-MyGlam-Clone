@@ -1,4 +1,4 @@
-# erratic-dolls-5259
+# MY Wardrobe
 
 
 <h1>Description</h1>
@@ -8,8 +8,16 @@
 
 <ul>
 <li>React</li>
+  <li>Java Script</li>
 <li>React-Redux</li>
-<li></li>
-<li></li>
+<li>Redux-Thunk</li>
+<li>React-Router-Dom<li></li>
+<li>Chakra-Ui</li>
+<li>Styled-Components</li>
+<li>NPM Packages</li>
+  
 </ul>
+
+<img src="
+"/>
 
