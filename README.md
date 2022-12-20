@@ -1,10 +1,11 @@
-<img width="40px" src="https://user-images.githubusercontent.com/107741808/208722329-c9ecf1f9-f606-4692-aa42-9701cd12838d.jpeg"/>  <h1>MY Wardrobe<h1>
+<h1>MY Wardrobe<h1>
+<img width="50px" src="https://user-images.githubusercontent.com/107741808/208722329-c9ecf1f9-f606-4692-aa42-9701cd12838d.jpeg"/>  
 
 
 <h1>Description</h1>
 <p>This project is clone of MyGlam E-commerce site. This project is build with collaboration of 4 members. This site basically belong to women as it contains all products related to women need such as makeup, carry bags, purse, footwears etc from lipstick to hair dryer, from top wear to sandals.</p>
 
-<h1>We have used Tech Stacks</h1>
+<h1>Tech Stacks we have used</h1>
 
 <ul>
 <li>React</li>
