@@ -20,8 +20,8 @@
 
 <h1>Project Layout</>
 
-<img src=""/>
-![Mywardrome](https://user-images.githubusercontent.com/107741808/208615830-343236f8-aa78-4def-b0f3-feb208e97d2c.png)
+<img src="(https://user-images.githubusercontent.com/107741808/208615830-343236f8-aa78-4def-b0f3-feb208e97d2c.png)"/>
+
 
 
 <h1>Live</h1>
