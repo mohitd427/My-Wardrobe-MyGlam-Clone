@@ -18,6 +18,19 @@
   
 </ul>
 
+<h1>Features</h1>
+<ol>
+<li>HHome Page</li>
+<li>Register Page</li>
+<li>Login Page</li>
+<li>Product Page</li>
+<li>Single Product Page</li>
+<li>Bag</li>
+<li>Chequeout</li>
+<li>Payment</li>
+
+</ol>
+
 <h1>Project Layout</>
 
 <img src="https://user-images.githubusercontent.com/107741808/208615830-343236f8-aa78-4def-b0f3-feb208e97d2c.png"/>
