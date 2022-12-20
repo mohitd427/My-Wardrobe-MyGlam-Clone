@@ -19,7 +19,7 @@
 </ul>
 
 <h1>Project Layout</>
-<img src="C:\Users\sa\Desktop\portfolio\my_portfolio\src\components\projects\Project_Images\Mywardrobe.png"/>
+<img src="C:\Users\sa\Desktop\portfolio\my_portfolio\src\components\projects\Project_Images\Mywardrobe.png"/ alt='My Wardrobe img'>
 
 <h1>Live</h1>
 https://clever-nougat-a72f71.netlify.app/
