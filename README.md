@@ -20,7 +20,7 @@
 
 <h1>Features</h1>
 <ol>
-<li>HHome Page</li>
+<li>Home Page</li>
 <li>Register Page</li>
 <li>Login Page</li>
 <li>Product Page</li>
