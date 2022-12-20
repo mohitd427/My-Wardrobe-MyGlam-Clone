@@ -19,7 +19,8 @@
 </ul>
 
 <h1>Project Layout</>
-<img src="https://user-images.githubusercontent.com/107741808/208614478-bec76700-f57c-4ac1-ab92-6f916e5fb828.png"/>
+<img src="https://user-images.githubusercontent.com/107741808/208614903-635bc530-742c-44c5-855e-d7d6c7f5624b.png
+"/>
 
 
 <h1>Live</h1>
