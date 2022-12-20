@@ -11,13 +11,13 @@
   <li>Java Script</li>
 <li>React-Redux</li>
 <li>Redux-Thunk</li>
-<li>React-Router-Dom<li></li>
+  <li>React-Router-Dom</li>
 <li>Chakra-Ui</li>
 <li>Styled-Components</li>
 <li>NPM Packages</li>
   
 </ul>
 
-<img src="
-"/>
+<h1>Live</h1>
+https://clever-nougat-a72f71.netlify.app/
 
