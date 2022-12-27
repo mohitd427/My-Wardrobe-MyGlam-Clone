@@ -38,6 +38,6 @@
 
 
 
-<h1>Live</h1>
+<h1>Go Live</h1>
 https://my-wardrobe.netlify.app/
 
