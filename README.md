@@ -39,5 +39,5 @@
 
 
 <h1>Go Live</h1>
-https://my-wardrobe.netlify.app/
+https://mywardrobe-seven.vercel.app/
 
