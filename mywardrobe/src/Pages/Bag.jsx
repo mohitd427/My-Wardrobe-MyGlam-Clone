@@ -9,7 +9,6 @@ export function Bag ()
 {
     const bagData = useSelector(store=>store.bagReducer)
     const {payload, isLoading} = bagData;
-    // console.log(payload.length)
 
     const dispatch = useDispatch()
     useEffect(()=>{
@@ -27,19 +26,19 @@ export function Bag ()
 
     return (
         <Box fontSize={{base:12, md:14, lg:16}} letterSpacing={0.9} fontWeight={400} mt={5} mb={5}>
-            <Text align={"center"} fontSize={{base:20, md:22, lg:24}} mb={5} >MY BAG ({isLoading === false ? payload.length : <Spinner size="xs" />})</Text>
+            <Text align={"center"} fontWeight={700} fontSize={{base:28, md:32, lg:32}} mb={5} >MY BAG ({isLoading === false ? payload.length : <Spinner size="xs" />})</Text>
             <Box w={{base:"100%", md:"95%", lg:"90%"}} margin={"auto"} align={"center"} backgroundColor={"black"} color={"white"} pt={2} pb={2} mb={5}  >
-                <Text>Congrats! You're eligible for free gift Please select.</Text>
+                <Text  fontWeight={600} fontSize={{base:18, md:20, lg:20}} width={{base:"95%"}}>Congrats! You're eligible for free gift Please select.</Text>
             </Box>
             {payload?.map(el=><BagItems key={el.id} {...el} />)}
             <Flex align={"center"} pt={3} pb={3} backgroundColor={"#eeeeee"} justify={"space-evenly"} display={{ base: 'block', md: 'flex', lg: 'flex' }}   >
-                <Text align={{ base: 'center', md: 'center', lg: 'center' }}  >You will earn  <Text as={"span"} fontWeight={700} >₹ {payload.length > 0 && payload.length*10} Good Points</Text> as cashback on this order.</Text>
+                <Text align={{ base: 'center', md: 'center', lg: 'center' }} width={{base:"95%"}}  >You will earn  <Text as={"span"} fontWeight={700} >₹ {payload.length > 0 && payload.length*10} Good Points</Text> as cashback on this order.</Text>
                 <Text display={{ base: 'none', md: 'block', lg: 'block' }}   align={{ base: 'center', md: 'center', lg: 'center' }}  >GRAND TOTAL <Text as={"span"} fontWeight={700} >₹ {Total}</Text></Text>
             </Flex>
             <Box align={"center"}>
-            <Text display={{ base: 'block', md: 'none', lg: 'none' }}   align={{ base: 'center', md: 'center', lg: 'center' }}  >GRAND TOTAL <Text as={"span"} fontWeight={700} >₹ {Total}</Text></Text>
+            <Text display={{ base: 'block', md: 'none', lg: 'none' }}   align={{ base: 'center', md: 'center', lg: 'center' }} fontSize={{base:16, md:20, lg:20}} >GRAND TOTAL <Text as={"span"} fontWeight={700} >₹ {Total}</Text></Text>
                 <Link to="/checkout">
-                    <Button fontSize={{base:12, md:14, lg:16}} backgroundColor={"black"} color={"white"} fontWeight={400} pt={2} pb={2} pl={20} pr={20} mt={5} align={{ base: 'center', md: 'center', lg: 'center' }} _hover={false}  >PROCEED TO CHECKOUT</Button>
+                    <Button fontSize={{base:16, md:20, lg:20}} backgroundColor={"black"} color={"white"} fontWeight={400} pt={2} pb={2} pl={20} pr={20} mt={5} mb={20} align={{ base: 'center', md: 'center', lg: 'center' }} _hover={false} width={{base:"95%", md:"50%", lg:"50%"}} >PROCEED TO CHECKOUT</Button>
                 </Link>
             </Box>
         </Box>

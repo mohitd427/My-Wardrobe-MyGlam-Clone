@@ -8,11 +8,10 @@ export function DeliveryDate()
         "October", "November", "December");
 
     var d = new Date();
-    var twoDaysAgo = d.getDate()+4;  //change day here
+    var twoDaysAgo = d.getDate()+1;  //change day here
     var curr_month = d.getMonth();
     var curr_year = d.getFullYear();
     var x = twoDaysAgo + "-" + m_names[curr_month] + "-" + curr_year;
-    // console.log(x)
 
     return(
         <Text as={"span"}>({x})</Text>
