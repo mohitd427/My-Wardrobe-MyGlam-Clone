@@ -1,6 +1,9 @@
 * {
     font-family: Roboto;
   }
+  #small-screen-navbar{
+    display: none;
+  }
   p {
     font-size: 0.8rem;
     font-weight: 500;
@@ -39,7 +42,6 @@
   .navbar-top{
     display: flex;
     align-items: center;
-    padding: 0rem 2rem;
     height: 66px;
   }
   
@@ -48,10 +50,9 @@
     align-items: center;
     background-color: #fafafa;
     width: 50vw;
-    height: 7vh;
+    height: 2.5rem;
     border-radius: 5px;
-    margin-left: 2rem;
-    margin-right: 380px;
+    margin: 0 15vw;
   }
   .inputDiv > input {
     background: none;
@@ -221,6 +222,9 @@
   
   /* ============== MEDIUM DEVICES ============== */
   @media screen and (max-width: 1024px) {
+    #small-screen-navbar{
+      display: none;
+    }
     .navbar-top {
       padding: 0rem 0.8rem;
     }
@@ -246,6 +250,28 @@
     .navbar {
       display: none;
     }
+    #small-screen-navbar{
+      position: fixed;
+      bottom: 0;
+      padding: 0 1rem;
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      background-color: black;
+    }
+    #small-screen-navbar a, #small-screen-navbar p{
+      color: white;
+    }
+    #small-screen-logo{
+      margin: 0.5rem 0;
+      padding: 0;
+      width: 40px;
+      border-radius: 100%;
+      height: 40px;
+    }
+
     .ad-store-right {
       display: none;
     }

@@ -191,132 +191,6 @@ const Navbar = () => {
                                                     <a href="#">Find Your Lipstick</a>
                                                 </button>
                                             </div>
-                                            {/* <div>
-                                                <a href="#" className="dropdown-content-heading">
-                                                    LIPS
-                                                </a>
-                                                <button>
-                                                    <a href="#">Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Crayon Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Liquid Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Hi-Shine Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Matte Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Gloss</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Liner</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Balm</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Glitter</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Stain</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lipstick Set</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Kit</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Find Your Lipstick</a>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <a href="#" className="dropdown-content-heading">
-                                                    LIPS
-                                                </a>
-                                                <button>
-                                                    <a href="#">Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Crayon Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Liquid Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Hi-Shine Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Matte Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Gloss</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Liner</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Balm</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Glitter</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Stain</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lipstick Set</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Kit</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Find Your Lipstick</a>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <a href="#" className="dropdown-content-heading">
-                                                    LIPS
-                                                </a>
-                                                <button>
-                                                    <a href="#">Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Crayon Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Liquid Lipstick</a>
-                                                </button>
-                                                <a href="#" className="dropdown-content-heading">
-                                                    LIPS
-                                                </a>
-                                                <button>
-                                                    <a href="#">Hi-Shine Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Matte Lipstick</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Gloss</a>
-                                                </button>
-                                                <a href="#" className="dropdown-content-heading">
-                                                    LIPS
-                                                </a>
-                                                <button>
-                                                    <a href="#">Lip Liner</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Balm</a>
-                                                </button>
-                                                <button>
-                                                    <a href="#">Lip Glitter</a>
-                                                </button>
-                    </div>*/}
                                             <div className="dropdown-content-imageProduct" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', marginLeft: 'auto' }}>
                                                 <center>
                                                     <a href="#">
@@ -786,57 +660,52 @@ const Navbar = () => {
                                     </div>
                                 </li>
                             </div>
-                            {/* ============== 7th Nav Item ==============  */}
-                            {/* <div>
-
-
-                            <li className="nav-item has-dropdown">
-                                <li className="nav-item">
-                                    <button>
-
-                                        <a href="#">REWARDS</a>
-                                    </button>
-                                </li>
-                                <div className="dropdown">
-                                    <div className="dropdown-content" style={{ height: '12rem' }}>
-                                    </div>
-                                </div>
-                            </li>
-                            {/* ============== 8th Nav Item ==============  
-                            <li className="nav-item has-dropdown">
-                                <li className="nav-item">
-                                    <button>
-
-                                        <a href="#">COLLECTION</a>
-                                    </button>
-                                </li>
-                                <div className="dropdown">
-                                    <div className="dropdown-content" style={{ height: '12rem' }}>
-                                        <div>
-                                            <a href="#" className="dropdown-content-heading">
-                                                WHITE FEATHER STUDIO
-                                            </a>
-                                            <button>
-                                                <a href="#">Lipstick</a>
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </li>
-                    </div> */}
-                            {/* ============== 8th Nav Item ==============  */}
-                            <div>
-                                <li className="nav-item">
-                                    <button>
-
-                                        <a href="#">OFFER</a>
-                                    </button>
-                                </li>
-                            </div>
                         </div>
                     </ul>
 
+                </div>
+            </div>
+            <div id="small-screen-navbar">
+                <div>
+                    <Link to={"/"}><img id="small-screen-logo" src={logo} alt="White-Feather-Logo" /></Link>
+                </div>
+                <div>
+                    <Link to={"/products"}><p>Makeup</p></Link>
+                </div>
+                <div>
+                    <Link to='/bag'>
+                        <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/login">
+                                {
+                                    checkVal ? (
+
+                                        <div className="accountName">
+
+                                            <div>
+
+                                                <button id="accountName-btn" onClick={accountNameDrop}>
+                                                    {
+                                                        checkVal
+                                                    }
+                                                    <IoMdArrowDropdown className="accountName-icon" />
+                                                </button>
+
+                                            </div>
+
+                                            <div className="accountName-dropDown" id="accountdrop">
+                                                <Link to='/'>My Profile</Link>
+                                            <Link to='/bag'>My Orders</Link>
+                                                <Text fontSize={'17px'}>My Dashboard</Text>
+                                                <button onClick={handleSignout}>Sign Out</button>
+                                            </div>
+                                        </div>
+
+                                    ) : (<BsPerson color="#fafafa" size="1.5rem" onClick={onOpen} style={{ cursor: 'pointer' }} />)
+                                }
+                    </Link>
                 </div>
             </div>
         </>

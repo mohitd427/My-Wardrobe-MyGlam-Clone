@@ -1,5 +1,6 @@
-import { Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react'
+import { Alert, AlertDescription, AlertIcon, AlertTitle, Button } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const OrderPlaced = () => {
   return (
@@ -21,8 +22,11 @@ const OrderPlaced = () => {
                 Thanks for placing your order. Your order will be placed soon.
             </AlertDescription>
         </Alert>
+        <Link to={"/"}>
+          <Button backgroundColor={"black"} color={"white"} width={{base:"90%", md:"60%", lg:"50%"}} display={"block"} m={"auto"} mt={5} align={'center'}>Go To Home Section</Button>
+        </Link>
     </div>
   )
 }
 
-export default OrderPlaced
+export default OrderPlaced;
