@@ -32,6 +32,17 @@
 
 </ol>
 
+<h1>Flow of this project</h1>
+<ol>
+<li> Firstly, you will see home page, </li>
+<li> You will have two options - login/register or product page</li>
+<li> On hovering the MAKEUP button and click on the Lipstick button, you will reach at the product page </li>
+<li> When you will click on any product, you will reach at single product page</li>
+<li> On single product page, you will get Bag button, on clicking it product will be added into bag. </li>
+<li> In the navbar, you will get bag icon, where you can find all the items which is added into bag</li>
+<li> On clicking proceed to checkout button, you will reach at checkout page, where you will get option for selecting address and a button for payment</li>
+<li> On clicking payment button, you will able to see payment options for payment.</li>
+</ol>
 <h1>Project Layout</>
 
 <img src="https://user-images.githubusercontent.com/107741808/208615830-343236f8-aa78-4def-b0f3-feb208e97d2c.png"/>
